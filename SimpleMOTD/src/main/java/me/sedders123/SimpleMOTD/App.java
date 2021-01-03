@@ -28,7 +28,7 @@ public final class App extends JavaPlugin implements Listener {
         String motd = config.getString("motd");
         if (motd != null && !motd.trim().isEmpty()) {
             motd = ChatColor.translateAlternateColorCodes('&', motd);
-            player.sendMessage(motd.split("\n"));
+            player.sendMessage(motd.split("\\\\n"));
         }
     }
 }
