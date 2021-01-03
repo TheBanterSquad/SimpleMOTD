@@ -22,8 +22,8 @@ jobs:
       - name: Set Asset Paths
         id: asset-paths
         run: | 
-          echo "##[set-output name=asset_name;]SimpleMOTD-$(echo ${GITHUB_REF#refs/tags/}).jar"
-          echo "##[set-output name=asset_path;]./SimpleMOTD/target/SimpleMOTD-$(echo ${GITHUB_REF#refs/tags/}).jar"
+          echo "##[set-output name=asset_name;]SimpleMOTD-$(echo ${GITHUB_REF#refs/tags/v}).jar"
+          echo "##[set-output name=asset_path;]./SimpleMOTD/target/SimpleMOTD-$(echo ${GITHUB_REF#refs/tags/v}).jar"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
