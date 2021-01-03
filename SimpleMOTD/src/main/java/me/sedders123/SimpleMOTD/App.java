@@ -6,6 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.entity.Player;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.ChatColor;
 
 public final class App extends JavaPlugin implements Listener {
     FileConfiguration config = getConfig();
@@ -26,6 +27,7 @@ public final class App extends JavaPlugin implements Listener {
         Player player = event.getPlayer();
         String motd = config.getString("motd");
         if (motd != null && !motd.trim().isEmpty()) {
+            motd = ChatColor.translateAlternateColorCodes('&', motd);
             player.sendMessage(motd.split("\n"));
         }
     }
