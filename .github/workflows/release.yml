@@ -35,6 +35,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./SimpleMOTD/target/SimpleMOTD-${{ github.ref#refs/tags/ }}.jar
-          asset_name: SimpleMOTD-${{ github.ref#!refs/tags/ }}.jar
+          asset_path: ./SimpleMOTD/target/SimpleMOTD-$(echo ${GITHUB_REF#refs/tags/}).jar
+          asset_name: SimpleMOTD-$(echo ${GITHUB_REF#refs/tags/}).jar
           asset_content_type: application/java-archive
