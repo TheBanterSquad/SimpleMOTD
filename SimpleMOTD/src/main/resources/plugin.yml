@@ -2,3 +2,23 @@ main: me.sedders123.SimpleMOTD.App
 name: SimpleMOTD
 version: 0.1.2
 api-version: 1.16
+
+commands:
+  smotd:
+    description: Generic SimpleMOTD Command
+    usage: /<command>
+  
+  smreload:
+    descritpion: Reload SimpleMOTD configuration
+    usage: /<command>
+    permission: simplemotd.reload
+
+  
+permissions:
+  simplemotd.*:
+    default: op
+    description: Give players with op everything by default
+
+  simplemotd.reload:
+    default: op
+    description: Allows user to reload the SimpleMOTD configuration
