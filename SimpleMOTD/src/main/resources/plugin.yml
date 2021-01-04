@@ -4,12 +4,8 @@ version: 0.2.0
 api-version: 1.16
 
 commands:
-  smotd:
-    description: Generic SimpleMOTD Command
-    usage: /<command>
-  
   smreload:
-    descritpion: Reload SimpleMOTD configuration
+    description: Reload SimpleMOTD configuration
     usage: /<command>
     permission: simplemotd.reload
 

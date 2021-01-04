@@ -22,20 +22,11 @@ public final class App extends JavaPlugin implements Listener {
 
        // Enable our class to check for new players using onPlayerJoin()
        getServer().getPluginManager().registerEvents(this, this);
-
-       getCommand("smotd").setExecutor(this);
        getCommand("smreload").setExecutor(this);
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        // Handle /smotd reload
-        if (args.length > 0){
-            if(args[0] != "reload"){
-                return false;
-            }
-        }
-
         if(!(sender instanceof Player) || ((Player)sender).hasPermission("simplemotd.reload")){
             // Not player so must be console
             reloadConfig();
