@@ -4,7 +4,7 @@ A super simple [Paper](https://github.com/PaperMC/Paper) plugin that displays a 
 
 ## Install
 
-Place the JAR file from the [latest release](https://github.com/sedders123/SimpleMOTD/releases/latest) into your `plugins/` directory and restart your server.
+Place the JAR file from the [latest release](https://github.com/TheBanterSquad/SimpleMOTD/releases/latest) into your `plugins/` directory and restart your server.
 
 ## Configuration
 
